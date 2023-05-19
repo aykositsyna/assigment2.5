@@ -28,126 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.vaccinateButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.sendToVaccButton = new System.Windows.Forms.Button();
-            this.sendToPrimaryVaccButton = new System.Windows.Forms.Button();
-            this.sendToSencondaryVaccButton = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.btnVaccinate = new System.Windows.Forms.Button();
+            this.tbAllPatients = new System.Windows.Forms.TextBox();
+            this.tbInProgress = new System.Windows.Forms.TextBox();
+            this.tbVaccinated = new System.Windows.Forms.TextBox();
+            this.btnSendToVacc = new System.Windows.Forms.Button();
+            this.btnSendToFirstVacc = new System.Windows.Forms.Button();
+            this.btnSendToSecondVacc = new System.Windows.Forms.Button();
+            this.labelAllPatients = new System.Windows.Forms.Label();
+            this.labelInProgress = new System.Windows.Forms.Label();
+            this.labelVaccinated = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // vaccinateButton
+            // btnVaccinate
             // 
-            this.vaccinateButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.vaccinateButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.vaccinateButton.ForeColor = System.Drawing.SystemColors.HotTrack;
-            this.vaccinateButton.Location = new System.Drawing.Point(495, 252);
-            this.vaccinateButton.Name = "vaccinateButton";
-            this.vaccinateButton.Size = new System.Drawing.Size(313, 44);
-            this.vaccinateButton.TabIndex = 0;
-            this.vaccinateButton.Text = "vaccinate";
-            this.vaccinateButton.UseVisualStyleBackColor = true;
+            this.btnVaccinate.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnVaccinate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnVaccinate.ForeColor = System.Drawing.SystemColors.HotTrack;
+            this.btnVaccinate.Location = new System.Drawing.Point(495, 252);
+            this.btnVaccinate.Name = "btnVaccinate";
+            this.btnVaccinate.Size = new System.Drawing.Size(313, 44);
+            this.btnVaccinate.TabIndex = 0;
+            this.btnVaccinate.Text = "vaccinate";
+            this.btnVaccinate.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // tbAllPatients
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 29);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(319, 267);
-            this.textBox1.TabIndex = 1;
+            this.tbAllPatients.Location = new System.Drawing.Point(12, 29);
+            this.tbAllPatients.Multiline = true;
+            this.tbAllPatients.Name = "tbAllPatients";
+            this.tbAllPatients.Size = new System.Drawing.Size(319, 267);
+            this.tbAllPatients.TabIndex = 1;
             // 
-            // textBox2
+            // tbInProgress
             // 
-            this.textBox2.Location = new System.Drawing.Point(495, 29);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(313, 209);
-            this.textBox2.TabIndex = 2;
+            this.tbInProgress.Location = new System.Drawing.Point(495, 29);
+            this.tbInProgress.Multiline = true;
+            this.tbInProgress.Name = "tbInProgress";
+            this.tbInProgress.Size = new System.Drawing.Size(313, 209);
+            this.tbInProgress.TabIndex = 2;
             // 
-            // textBox3
+            // tbVaccinated
             // 
-            this.textBox3.Location = new System.Drawing.Point(838, 29);
-            this.textBox3.Multiline = true;
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(337, 267);
-            this.textBox3.TabIndex = 3;
+            this.tbVaccinated.Location = new System.Drawing.Point(838, 29);
+            this.tbVaccinated.Multiline = true;
+            this.tbVaccinated.Name = "tbVaccinated";
+            this.tbVaccinated.Size = new System.Drawing.Size(337, 267);
+            this.tbVaccinated.TabIndex = 3;
             // 
-            // sendToVaccButton
+            // btnSendToVacc
             // 
-            this.sendToVaccButton.Location = new System.Drawing.Point(348, 29);
-            this.sendToVaccButton.Name = "sendToVaccButton";
-            this.sendToVaccButton.Size = new System.Drawing.Size(128, 75);
-            this.sendToVaccButton.TabIndex = 4;
-            this.sendToVaccButton.Text = "send to vaccination";
-            this.sendToVaccButton.UseVisualStyleBackColor = true;
+            this.btnSendToVacc.Location = new System.Drawing.Point(348, 29);
+            this.btnSendToVacc.Name = "btnSendToVacc";
+            this.btnSendToVacc.Size = new System.Drawing.Size(128, 75);
+            this.btnSendToVacc.TabIndex = 4;
+            this.btnSendToVacc.Text = "send al to vaccination";
+            this.btnSendToVacc.UseVisualStyleBackColor = true;
+            this.btnSendToVacc.Click += new System.EventHandler(this.btnSendToVacc_Click);
             // 
-            // sendToPrimaryVaccButton
+            // btnSendToFirstVacc
             // 
-            this.sendToPrimaryVaccButton.Location = new System.Drawing.Point(348, 123);
-            this.sendToPrimaryVaccButton.Name = "sendToPrimaryVaccButton";
-            this.sendToPrimaryVaccButton.Size = new System.Drawing.Size(128, 75);
-            this.sendToPrimaryVaccButton.TabIndex = 5;
-            this.sendToPrimaryVaccButton.Text = "send to primary vaccination";
-            this.sendToPrimaryVaccButton.UseVisualStyleBackColor = true;
+            this.btnSendToFirstVacc.Location = new System.Drawing.Point(348, 123);
+            this.btnSendToFirstVacc.Name = "btnSendToFirstVacc";
+            this.btnSendToFirstVacc.Size = new System.Drawing.Size(128, 75);
+            this.btnSendToFirstVacc.TabIndex = 5;
+            this.btnSendToFirstVacc.Text = "send to primary vaccination";
+            this.btnSendToFirstVacc.UseVisualStyleBackColor = true;
+            this.btnSendToFirstVacc.Click += new System.EventHandler(this.btnSendToFirstVacc_Click);
             // 
-            // sendToSencondaryVaccButton
+            // btnSendToSecondVacc
             // 
-            this.sendToSencondaryVaccButton.Location = new System.Drawing.Point(348, 214);
-            this.sendToSencondaryVaccButton.Name = "sendToSencondaryVaccButton";
-            this.sendToSencondaryVaccButton.Size = new System.Drawing.Size(128, 82);
-            this.sendToSencondaryVaccButton.TabIndex = 6;
-            this.sendToSencondaryVaccButton.Text = "send to secondary vaccination";
-            this.sendToSencondaryVaccButton.UseVisualStyleBackColor = true;
-            this.sendToSencondaryVaccButton.Click += new System.EventHandler(this.button4_Click);
+            this.btnSendToSecondVacc.Location = new System.Drawing.Point(348, 214);
+            this.btnSendToSecondVacc.Name = "btnSendToSecondVacc";
+            this.btnSendToSecondVacc.Size = new System.Drawing.Size(128, 82);
+            this.btnSendToSecondVacc.TabIndex = 6;
+            this.btnSendToSecondVacc.Text = "send to secondary vaccination";
+            this.btnSendToSecondVacc.UseVisualStyleBackColor = true;
+            this.btnSendToSecondVacc.Click += new System.EventHandler(this.btnSendToSecondVacc_Click);
             // 
-            // label1
+            // labelAllPatients
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(44, 16);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "label1";
+            this.labelAllPatients.AutoSize = true;
+            this.labelAllPatients.Location = new System.Drawing.Point(12, 10);
+            this.labelAllPatients.Name = "labelAllPatients";
+            this.labelAllPatients.Size = new System.Drawing.Size(72, 16);
+            this.labelAllPatients.TabIndex = 7;
+            this.labelAllPatients.Text = "All patients";
             // 
-            // label2
+            // labelInProgress
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(495, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(44, 16);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "label2";
+            this.labelInProgress.AutoSize = true;
+            this.labelInProgress.Location = new System.Drawing.Point(495, 9);
+            this.labelInProgress.Name = "labelInProgress";
+            this.labelInProgress.Size = new System.Drawing.Size(161, 16);
+            this.labelInProgress.TabIndex = 8;
+            this.labelInProgress.Text = "Patients being vaccinated";
             // 
-            // label3
+            // labelVaccinated
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(838, 8);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(44, 16);
-            this.label3.TabIndex = 9;
-            this.label3.Text = "label3";
+            this.labelVaccinated.AutoSize = true;
+            this.labelVaccinated.Location = new System.Drawing.Point(838, 8);
+            this.labelVaccinated.Name = "labelVaccinated";
+            this.labelVaccinated.Size = new System.Drawing.Size(125, 16);
+            this.labelVaccinated.TabIndex = 9;
+            this.labelVaccinated.Text = "Vaccinated patients";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 706);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.sendToSencondaryVaccButton);
-            this.Controls.Add(this.sendToPrimaryVaccButton);
-            this.Controls.Add(this.sendToVaccButton);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.vaccinateButton);
+            this.Controls.Add(this.labelVaccinated);
+            this.Controls.Add(this.labelInProgress);
+            this.Controls.Add(this.labelAllPatients);
+            this.Controls.Add(this.btnSendToSecondVacc);
+            this.Controls.Add(this.btnSendToFirstVacc);
+            this.Controls.Add(this.btnSendToVacc);
+            this.Controls.Add(this.tbVaccinated);
+            this.Controls.Add(this.tbInProgress);
+            this.Controls.Add(this.tbAllPatients);
+            this.Controls.Add(this.btnVaccinate);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "send all to vaccination";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -155,16 +157,16 @@
 
         #endregion
 
-        private System.Windows.Forms.Button vaccinateButton;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button sendToVaccButton;
-        private System.Windows.Forms.Button sendToPrimaryVaccButton;
-        private System.Windows.Forms.Button sendToSencondaryVaccButton;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnVaccinate;
+        private System.Windows.Forms.TextBox tbAllPatients;
+        private System.Windows.Forms.TextBox tbInProgress;
+        private System.Windows.Forms.TextBox tbVaccinated;
+        private System.Windows.Forms.Button btnSendToVacc;
+        private System.Windows.Forms.Button btnSendToFirstVacc;
+        private System.Windows.Forms.Button btnSendToSecondVacc;
+        private System.Windows.Forms.Label labelAllPatients;
+        private System.Windows.Forms.Label labelInProgress;
+        private System.Windows.Forms.Label labelVaccinated;
     }
 }
 

@@ -12,12 +12,24 @@ namespace assigment2._5
 {
     public partial class Form1 : Form
     {
+        PatientSystem patientSystem = new PatientSystem();
         public Form1()
         {
             InitializeComponent();
+            
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void btnSendToVacc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSendToFirstVacc_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnSendToSecondVacc_Click(object sender, EventArgs e)
         {
 
         }
