@@ -16,22 +16,28 @@ namespace assigment2._5
         public Form1()
         {
             InitializeComponent();
+            tbAllPatientsListView
             
         }
 
         private void btnSendToVacc_Click(object sender, EventArgs e)
         {
-
+            patientSystem.SendAllPatients();
         }
 
         private void btnSendToFirstVacc_Click(object sender, EventArgs e)
         {
-
+            patientSystem.SendOnFirstVacc();
         }
 
         private void btnSendToSecondVacc_Click(object sender, EventArgs e)
         {
+            patientSystem.SendOnSecondVacc();
+        }
 
+        public void Refresh()
+        {
+            tbAllPatientsListView
         }
     }
 }

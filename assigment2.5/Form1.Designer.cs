@@ -82,7 +82,7 @@
             this.btnSendToVacc.Name = "btnSendToVacc";
             this.btnSendToVacc.Size = new System.Drawing.Size(128, 75);
             this.btnSendToVacc.TabIndex = 4;
-            this.btnSendToVacc.Text = "send al to vaccination";
+            this.btnSendToVacc.Text = "send all to vaccination";
             this.btnSendToVacc.UseVisualStyleBackColor = true;
             this.btnSendToVacc.Click += new System.EventHandler(this.btnSendToVacc_Click);
             // 
@@ -92,7 +92,7 @@
             this.btnSendToFirstVacc.Name = "btnSendToFirstVacc";
             this.btnSendToFirstVacc.Size = new System.Drawing.Size(128, 75);
             this.btnSendToFirstVacc.TabIndex = 5;
-            this.btnSendToFirstVacc.Text = "send to primary vaccination";
+            this.btnSendToFirstVacc.Text = "send to first vaccination";
             this.btnSendToFirstVacc.UseVisualStyleBackColor = true;
             this.btnSendToFirstVacc.Click += new System.EventHandler(this.btnSendToFirstVacc_Click);
             // 
@@ -102,7 +102,7 @@
             this.btnSendToSecondVacc.Name = "btnSendToSecondVacc";
             this.btnSendToSecondVacc.Size = new System.Drawing.Size(128, 82);
             this.btnSendToSecondVacc.TabIndex = 6;
-            this.btnSendToSecondVacc.Text = "send to secondary vaccination";
+            this.btnSendToSecondVacc.Text = "send to second vaccination";
             this.btnSendToSecondVacc.UseVisualStyleBackColor = true;
             this.btnSendToSecondVacc.Click += new System.EventHandler(this.btnSendToSecondVacc_Click);
             // 
