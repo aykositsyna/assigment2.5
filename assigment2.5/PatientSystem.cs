@@ -37,11 +37,6 @@ namespace assigment2._5
             });
             allPatients.Add(new Patient()
             {
-                Name = "Hulk",
-                VaccNumber = 0,
-            });
-            allPatients.Add(new Patient()
-            {
                 Name = "Hawkeye",
                 VaccNumber = 1,
             });
@@ -50,10 +45,6 @@ namespace assigment2._5
         public void SendAllPatients()
         {
             patientsOnVaccination.AddRange(allPatients);
-            foreach(Patient patient in patientsOnVaccination)
-            {
-                Vaccinate(patient);
-            }
             allPatients.Clear();
         }
 
@@ -65,7 +56,8 @@ namespace assigment2._5
                 if(patient.VaccNumber == 0)
                 {
                     patientsOnVaccination.Add(patient);
-                    allPatients.Remove(patient); //maybe RemoveAt
+                    allPatients.RemoveAt(i); //maybe RemoveAt
+                    i--;
                 }
             }
         }
@@ -78,19 +70,39 @@ namespace assigment2._5
                 if (patient.VaccNumber == 1)
                 {
                     patientsOnVaccination.Add(patient);
-                    allPatients.Remove(patient); //maybe RemoveAt
+                    allPatients.RemoveAt(i); //maybe RemoveAt
+                    i--;
                 }
             }
         }
 
-        public void Vaccinate(Patient patient)
+        public void Vaccinate()
         {
             Random random = new Random();
-            int chance = random.Next(0, 1);
-            if (chance == 1)
+            for (int i = 0; i < patientsOnVaccination.Count; i++)
             {
-                patient.VaccNumber++;
+                Patient patient = patientsOnVaccination[i];
+                int chance = random.Next(0, 2);
+                if (patient.VaccNumber != 2 && chance == 1)
+                {
+                    patient.VaccNumber++;
+                }
+
+                if (patient.VaccNumber == 2)
+                {
+                    vaccinatedPatients.Add(patient);
+                    patientsOnVaccination.RemoveAt(i);
+                    i--;
+                }
+
+                if(patient.VaccNumber == 0 || patient.VaccNumber == 1)
+                {
+                    allPatients.Add(patient);
+                    patientsOnVaccination.RemoveAt(i);
+                    i--;
+                }
             }
+          
         }
 
         public void Update()

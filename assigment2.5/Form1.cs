@@ -16,28 +16,67 @@ namespace assigment2._5
         public Form1()
         {
             InitializeComponent();
-            tbAllPatientsListView
-            
+            AllPatientsListView.Columns.Add("Vaccines");
+            AllPatientsListView.Columns.Add("Patient");
+
+            PatientsONVaccListView.Columns.Add("Vaccines");
+            PatientsONVaccListView.Columns.Add("Patient");
+
+            VaccinatedPatientsListView.Columns.Add("Vaccines");
+            VaccinatedPatientsListView.Columns.Add("Patient");
+
+            Refresh();
         }
 
         private void btnSendToVacc_Click(object sender, EventArgs e)
         {
             patientSystem.SendAllPatients();
+            Refresh();
         }
 
         private void btnSendToFirstVacc_Click(object sender, EventArgs e)
         {
             patientSystem.SendOnFirstVacc();
+            Refresh();
         }
 
         private void btnSendToSecondVacc_Click(object sender, EventArgs e)
         {
             patientSystem.SendOnSecondVacc();
+            Refresh();
+        }
+        private void btnVaccinate_Click(object sender, EventArgs e)
+        {
+            patientSystem.Vaccinate();
+            Refresh();
         }
 
         public void Refresh()
         {
-            tbAllPatientsListView
+            AllPatientsListView.Items.Clear();
+            foreach (Patient patient in patientSystem.allPatients)
+            {
+                ListViewItem item = new ListViewItem(patient.VaccNumber.ToString());
+                item.SubItems.Add(patient.Name);
+                AllPatientsListView.Items.Add(item);
+            }
+
+            PatientsONVaccListView.Items.Clear();
+            foreach (Patient patient in patientSystem.patientsOnVaccination)
+            {
+                ListViewItem item = new ListViewItem(patient.VaccNumber.ToString());
+                item.SubItems.Add(patient.Name);
+                PatientsONVaccListView.Items.Add(item);
+            }
+
+            VaccinatedPatientsListView.Items.Clear();
+            foreach (Patient patient in patientSystem.vaccinatedPatients)
+            {
+                ListViewItem item = new ListViewItem(patient.VaccNumber.ToString());
+                item.SubItems.Add(patient.Name);
+                VaccinatedPatientsListView.Items.Add(item);
+            }
         }
+
     }
 }

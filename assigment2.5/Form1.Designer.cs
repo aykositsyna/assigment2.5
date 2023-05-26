@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.btnVaccinate = new System.Windows.Forms.Button();
-            this.tbAllPatients = new System.Windows.Forms.TextBox();
-            this.tbInProgress = new System.Windows.Forms.TextBox();
-            this.tbVaccinated = new System.Windows.Forms.TextBox();
             this.btnSendToVacc = new System.Windows.Forms.Button();
             this.btnSendToFirstVacc = new System.Windows.Forms.Button();
             this.btnSendToSecondVacc = new System.Windows.Forms.Button();
             this.labelAllPatients = new System.Windows.Forms.Label();
             this.labelInProgress = new System.Windows.Forms.Label();
             this.labelVaccinated = new System.Windows.Forms.Label();
+            this.AllPatientsListView = new System.Windows.Forms.ListView();
+            this.PatientsONVaccListView = new System.Windows.Forms.ListView();
+            this.VaccinatedPatientsListView = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // btnVaccinate
@@ -51,30 +51,7 @@
             this.btnVaccinate.TabIndex = 0;
             this.btnVaccinate.Text = "vaccinate";
             this.btnVaccinate.UseVisualStyleBackColor = true;
-            // 
-            // tbAllPatients
-            // 
-            this.tbAllPatients.Location = new System.Drawing.Point(12, 29);
-            this.tbAllPatients.Multiline = true;
-            this.tbAllPatients.Name = "tbAllPatients";
-            this.tbAllPatients.Size = new System.Drawing.Size(319, 267);
-            this.tbAllPatients.TabIndex = 1;
-            // 
-            // tbInProgress
-            // 
-            this.tbInProgress.Location = new System.Drawing.Point(495, 29);
-            this.tbInProgress.Multiline = true;
-            this.tbInProgress.Name = "tbInProgress";
-            this.tbInProgress.Size = new System.Drawing.Size(313, 209);
-            this.tbInProgress.TabIndex = 2;
-            // 
-            // tbVaccinated
-            // 
-            this.tbVaccinated.Location = new System.Drawing.Point(838, 29);
-            this.tbVaccinated.Multiline = true;
-            this.tbVaccinated.Name = "tbVaccinated";
-            this.tbVaccinated.Size = new System.Drawing.Size(337, 267);
-            this.tbVaccinated.TabIndex = 3;
+            this.btnVaccinate.Click += new System.EventHandler(this.btnVaccinate_Click);
             // 
             // btnSendToVacc
             // 
@@ -133,20 +110,50 @@
             this.labelVaccinated.TabIndex = 9;
             this.labelVaccinated.Text = "Vaccinated patients";
             // 
+            // AllPatientsListView
+            // 
+            this.AllPatientsListView.HideSelection = false;
+            this.AllPatientsListView.Location = new System.Drawing.Point(15, 39);
+            this.AllPatientsListView.Name = "AllPatientsListView";
+            this.AllPatientsListView.Size = new System.Drawing.Size(311, 257);
+            this.AllPatientsListView.TabIndex = 10;
+            this.AllPatientsListView.UseCompatibleStateImageBehavior = false;
+            this.AllPatientsListView.View = System.Windows.Forms.View.Details;
+            // 
+            // PatientsONVaccListView
+            // 
+            this.PatientsONVaccListView.HideSelection = false;
+            this.PatientsONVaccListView.Location = new System.Drawing.Point(495, 39);
+            this.PatientsONVaccListView.Name = "PatientsONVaccListView";
+            this.PatientsONVaccListView.Size = new System.Drawing.Size(313, 207);
+            this.PatientsONVaccListView.TabIndex = 11;
+            this.PatientsONVaccListView.UseCompatibleStateImageBehavior = false;
+            this.PatientsONVaccListView.View = System.Windows.Forms.View.Details;
+            // 
+            // VaccinatedPatientsListView
+            // 
+            this.VaccinatedPatientsListView.HideSelection = false;
+            this.VaccinatedPatientsListView.Location = new System.Drawing.Point(850, 39);
+            this.VaccinatedPatientsListView.Name = "VaccinatedPatientsListView";
+            this.VaccinatedPatientsListView.Size = new System.Drawing.Size(311, 257);
+            this.VaccinatedPatientsListView.TabIndex = 12;
+            this.VaccinatedPatientsListView.UseCompatibleStateImageBehavior = false;
+            this.VaccinatedPatientsListView.View = System.Windows.Forms.View.Details;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1245, 706);
+            this.Controls.Add(this.VaccinatedPatientsListView);
+            this.Controls.Add(this.PatientsONVaccListView);
+            this.Controls.Add(this.AllPatientsListView);
             this.Controls.Add(this.labelVaccinated);
             this.Controls.Add(this.labelInProgress);
             this.Controls.Add(this.labelAllPatients);
             this.Controls.Add(this.btnSendToSecondVacc);
             this.Controls.Add(this.btnSendToFirstVacc);
             this.Controls.Add(this.btnSendToVacc);
-            this.Controls.Add(this.tbVaccinated);
-            this.Controls.Add(this.tbInProgress);
-            this.Controls.Add(this.tbAllPatients);
             this.Controls.Add(this.btnVaccinate);
             this.Name = "Form1";
             this.Text = "send all to vaccination";
@@ -158,15 +165,15 @@
         #endregion
 
         private System.Windows.Forms.Button btnVaccinate;
-        private System.Windows.Forms.TextBox tbAllPatients;
-        private System.Windows.Forms.TextBox tbInProgress;
-        private System.Windows.Forms.TextBox tbVaccinated;
         private System.Windows.Forms.Button btnSendToVacc;
         private System.Windows.Forms.Button btnSendToFirstVacc;
         private System.Windows.Forms.Button btnSendToSecondVacc;
         private System.Windows.Forms.Label labelAllPatients;
         private System.Windows.Forms.Label labelInProgress;
         private System.Windows.Forms.Label labelVaccinated;
+        private System.Windows.Forms.ListView AllPatientsListView;
+        private System.Windows.Forms.ListView PatientsONVaccListView;
+        private System.Windows.Forms.ListView VaccinatedPatientsListView;
     }
 }
 
